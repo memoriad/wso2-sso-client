@@ -4,17 +4,6 @@ spring:
   security:
     oauth2:
       client:
-#        registration:
-#          wso2:
-#            client-id: XpLRudVHYFtABLrnOtFuzsLHTtAa
-#            client-secret: f_jG7ijz5xhwQ_zYprnzmgccV3Aa
-#        provider:
-#          wso2:
-#            authorization-uri: https://localhost:9443/oauth2/authorize
-#            token-uri: https://localhost:9443/oauth2/token
-#            user-info-uri: https://localhost:9443/oauth2/userinfo
-#            jwk-set-uri: https://localhost:9443/oauth2/jwks
-            
         registration:
           wso2:
             client-id: JmOyV0nHeR0tGYwDG2SYyphgMDAa
@@ -27,10 +16,8 @@ spring:
             jwk-set-uri: https://auth.nerves-cloud.com:9443/oauth2/jwks
 
 params: 
-#   trustStorePath: /Users/priorsolution/Desktop/self-key/client-truststore.jks
    trustStorePath: /ca-keys/client-truststore.jks
    trustStorePassword: wso2carbon
-#   keyStorePath: /Users/priorsolution/Desktop/self-key/wso2carbon.jks
    keyStorePath: /ca-keys/wso2carbon.jks
    keyStorePassword: wso2carbon
    defaultType: JKS

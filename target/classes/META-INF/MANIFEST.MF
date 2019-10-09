@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: priorsolution
+Build-Jdk: 12.0.2
+Implementation-Title: oauth2-login-sample
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.github.ajanthan.spring.security
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/oauth2-login-sample
+Created-By: Maven Integration for Eclipse
+

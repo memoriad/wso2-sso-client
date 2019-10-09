@@ -1,4 +1,4 @@
-package com.github.ajanthan.spring.security.oauth2loginsample.filter;
+package co.prior.sso.oauth2loginsample.filter;
 
 import java.io.IOException;
 
@@ -13,9 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
-import org.springframework.stereotype.Component;
 
-@Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class CorsConfigFilter implements Filter {
 
@@ -46,5 +44,5 @@ public class CorsConfigFilter implements Filter {
 		// TODO Auto-generated method stub
 		
 	}
-	
+
 }

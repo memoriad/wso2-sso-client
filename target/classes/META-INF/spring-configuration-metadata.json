@@ -2,34 +2,34 @@
   "hints": [],
   "groups": [
     {
-      "sourceType": "com.github.ajanthan.spring.security.oauth2loginsample.Params",
+      "sourceType": "co.prior.sso.oauth2loginsample.Params",
       "name": "params",
-      "type": "com.github.ajanthan.spring.security.oauth2loginsample.Params"
+      "type": "co.prior.sso.oauth2loginsample.Params"
     }
   ],
   "properties": [
     {
-      "sourceType": "com.github.ajanthan.spring.security.oauth2loginsample.Params",
+      "sourceType": "co.prior.sso.oauth2loginsample.Params",
       "name": "params.default-type",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "com.github.ajanthan.spring.security.oauth2loginsample.Params",
+      "sourceType": "co.prior.sso.oauth2loginsample.Params",
       "name": "params.key-store-password",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "com.github.ajanthan.spring.security.oauth2loginsample.Params",
+      "sourceType": "co.prior.sso.oauth2loginsample.Params",
       "name": "params.key-store-path",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "com.github.ajanthan.spring.security.oauth2loginsample.Params",
+      "sourceType": "co.prior.sso.oauth2loginsample.Params",
       "name": "params.trust-store-password",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "com.github.ajanthan.spring.security.oauth2loginsample.Params",
+      "sourceType": "co.prior.sso.oauth2loginsample.Params",
       "name": "params.trust-store-path",
       "type": "java.lang.String"
     }

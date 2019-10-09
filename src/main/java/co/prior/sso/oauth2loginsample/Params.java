@@ -1,13 +1,13 @@
-package com.github.ajanthan.spring.security.oauth2loginsample;
+package co.prior.sso.oauth2loginsample;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import lombok.Data;
 
+@Data
 @Component
 @ConfigurationProperties("params")
-@Data
 public class Params {
 
 	//default values, can be override by external settings

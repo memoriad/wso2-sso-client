@@ -1,4 +1,4 @@
-package com.github.ajanthan.spring.security.oauth2loginsample;
+package co.prior.sso.oauth2loginsample;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -11,7 +11,7 @@ import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
 import org.springframework.security.oauth2.core.oidc.IdTokenClaimNames;
 
-import com.github.ajanthan.spring.security.oauth2loginsample.filter.CorsConfigFilter;
+import co.prior.sso.oauth2loginsample.filter.CorsConfigFilter;
 
 @Configuration
 public class OAuth2LoginConfig {
@@ -35,8 +35,7 @@ public class OAuth2LoginConfig {
 	private String jwkSetUri;
 	
     @Bean
-    public ClientRegistrationRepository
-    clientRegistrationRepository() {
+    public ClientRegistrationRepository clientRegistrationRepository() {
         return new InMemoryClientRegistrationRepository(this.WSO2ClientRegistration());
     }
 

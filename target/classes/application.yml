@@ -28,9 +28,9 @@ spring:
 
 params: 
 #   trustStorePath: /Users/priorsolution/Desktop/self-key/client-truststore.jks
-   trustStorePath: /Users/priorsolution/Desktop/ca-key/client-truststore.jks
+   trustStorePath: /ca-keys/client-truststore.jks
    trustStorePassword: wso2carbon
 #   keyStorePath: /Users/priorsolution/Desktop/self-key/wso2carbon.jks
-   keyStorePath: /Users/priorsolution/Desktop/ca-key/wso2carbon.jks
+   keyStorePath: /ca-keys/wso2carbon.jks
    keyStorePassword: wso2carbon
    defaultType: JKS

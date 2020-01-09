@@ -6,6 +6,10 @@ server:
     key-store-password: password
     key-alias: gfmis
     enabled: true
+    
+  servlet:
+    session:
+      timeout: 3600
 
 spring:
   thymeleaf:

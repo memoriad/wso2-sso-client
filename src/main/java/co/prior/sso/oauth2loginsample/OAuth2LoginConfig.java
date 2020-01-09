@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.oauth2.client.InMemoryOAuth2AuthorizedClientService;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientService;
 import org.springframework.security.oauth2.client.registration.ClientRegistration;
@@ -15,6 +16,7 @@ import org.springframework.security.oauth2.client.registration.InMemoryClientReg
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
 import org.springframework.security.oauth2.core.oidc.IdTokenClaimNames;
+import org.springframework.security.web.session.HttpSessionEventPublisher;
 
 import co.prior.sso.oauth2loginsample.filter.CorsConfigFilter;
 
@@ -58,17 +60,22 @@ public class OAuth2LoginConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-				.antMatchers("/login").permitAll()
-				.antMatchers("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.ttf", "/**/*.woff", "/**/*.woff2", "/**/*.ico").permitAll()
 				.anyRequest().authenticated()
-				.and().oauth2Login().loginPage("/login")
+				.and().oauth2Login().loginPage("http://localhost:4200/login")
+				.defaultSuccessUrl("http://localhost:4200")
 				.clientRegistrationRepository(clientRegistrationRepository())
 				.authorizedClientService(authorizedClientService())
-				.and().logout().logoutUrl("/logout").logoutSuccessUrl("/login")
+				.and().logout().logoutSuccessUrl("http://localhost:4200/login")
 				.clearAuthentication(true)
 				.invalidateHttpSession(true)
 				.deleteCookies("JSESSIONID")
-				.permitAll();
+				.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
+				.invalidSessionUrl("http://localhost:4200/login").sessionFixation().newSession();
+	}
+	
+	@Bean
+	public HttpSessionEventPublisher httpSessionEventPublisher() {
+	    return new HttpSessionEventPublisher();
 	}
 
 	@Bean
